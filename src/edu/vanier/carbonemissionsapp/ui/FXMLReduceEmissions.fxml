@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.vanier.carbonemissionsapp.ui.FXMLReduceEmissionsController">
+   <top>
+      <Label text="How to reduce your carbon footprint" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font></Label>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="800.0" spacing="50.0">
+               <children>
+                  <JFXButton fx:id="btnWhy" mnemonicParsing="false" onAction="#handleBtnWhy" style="-fx-border-color: gray; -fx-border-radius: 15;" text="Why you should reduce your carbon emissions" />
+                  <JFXButton fx:id="btnReduceCar" mnemonicParsing="false" onAction="#handleBtnReduceCar" style="-fx-border-color: gray; -fx-border-radius: 15;" text="Reduce carbon emission for cars " />
+                  <JFXButton fx:id="btnReduceFootprint" mnemonicParsing="false" onAction="#handleBtnReduceFootprint" style="-fx-border-color: gray; -fx-border-radius: 15;" text="Reduce your carbon footprint" />
+               </children>
+            </HBox>
+            <TextArea fx:id="txtText" prefHeight="546.0" prefWidth="800.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

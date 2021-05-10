@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="edu.vanier.carbonemissionsapp.ui.FXMLWelcomePageController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" />
+      <HBox alignment="CENTER" layoutX="200.0" layoutY="300.0" prefHeight="201.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <JFXButton fx:id="btnSignUp" mnemonicParsing="false" onAction="#handleSignUpButton" style="-fx-border-color: gray; -fx-border-radius: 15;" text="Sign up">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSignIn" mnemonicParsing="false" onAction="#handleSignInButton" style="-fx-border-color: gray; -fx-border-radius: 15;" text="Sign in">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnGuest" mnemonicParsing="false" onAction="#handleGuestButton" style="-fx-border-color: gray; -fx-border-radius: 15;" text="Guest">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label id="lblWelcome" alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="140.0" prefHeight="36.0" prefWidth="453.0" text="Welcome to the Carbon Emissions Calculator" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

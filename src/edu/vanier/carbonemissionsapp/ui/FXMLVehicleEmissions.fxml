@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.vanier.carbonemissionsapp.ui.FXMLVehicleEmissionsController">
+    <bottom>
+        <JFXButton fx:id="btnCalculate" alignment="CENTER" contentDisplay="CENTER" layoutX="500.0" layoutY="496.0" onAction="#handleSelections" prefHeight="25.0" prefWidth="176.0" style="-fx-border-color: gray; -fx-border-radius: 15;" text="Calculate" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" />
+         </BorderPane.margin></JFXButton>
+    </bottom>
+    <center>
+        <GridPane alignment="CENTER" layoutX="240.0" layoutY="130.0" maxHeight="350.0" maxWidth="350.0" prefHeight="350.0" prefWidth="350.0">
+          <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="261.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+           
+              <Label text="Year: ">
+                 <font>
+                    <Font size="14.0" />
+                 </font>
+              </Label>
+              <Label text="Make: " GridPane.rowIndex="1">
+                 <font>
+                    <Font size="14.0" />
+                 </font>
+              </Label>
+              <Label text="Model:" GridPane.rowIndex="2">
+                 <font>
+                    <Font size="14.0" />
+                 </font>
+              </Label>
+              <Label text="Engine Size: " GridPane.rowIndex="3">
+                 <font>
+                    <Font size="14.0" />
+                 </font>
+              </Label>
+              <Label text="Transmission:" GridPane.rowIndex="4">
+                 <font>
+                    <Font size="14.0" />
+                 </font>
+              </Label>
+              <Label text="Distance:" GridPane.rowIndex="5">
+                 <font>
+                    <Font size="14.0" />
+                 </font>
+              </Label>
+              <JFXComboBox fx:id="cmbYear" onAction="#handleSelections" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" />
+              <JFXComboBox fx:id="cmbMake" onAction="#handleSelections" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              <JFXComboBox fx:id="cmbModel" onAction="#handleSelections" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              <JFXComboBox fx:id="cmbEngine" onAction="#handleSelections" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              <JFXComboBox fx:id="cmbTransmission" onAction="#handleSelections" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+              <JFXTextField fx:id="txtDistance" maxWidth="240.0" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        </GridPane>
+      </center>
+   <top>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="110.0" prefWidth="800.0" text="Calculate Vehicle Emissions">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="BASELINE_LEFT" prefHeight="40.0" prefWidth="800.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="249.0" text="Would you like to compare vehicles: " textAlignment="CENTER" />
+                  <JFXComboBox fx:id="cmbCompare" onAction="#handleBtnCompare" prefHeight="25.0" prefWidth="77.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
